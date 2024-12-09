@@ -30,12 +30,12 @@ Five datasets inculding miniImagenet, CropDiseases, EuroSAT, ISIC2018 and ChestX
 # 3 usage
 ## 3.1 Training
 ```
-python network_train.py -stage pretrain -name myName -train_aug -milestones 9999 -stop_epoch 50 -optimizer adamW -decay 0.01 -model VIT_S -aux_param 0.8
+python network_train.py -stage pretrain -name VIT_dino -train_aug -milestones 9999 -stop_epoch 50 -optimizer adamW -decay 0.01 -model VIT_S -aux_param 0.8
 ```
 
 ## 3.2 Testing
 ```
-python network_test.py -ckp_path output/checkpoints/myName/best_$dataset_model.tar -stage pretrain -dataset $dataset -n_shot 5 
+python network_test.py -ckp_path output/checkpoints/VIT_dino/best_$dataset_model.tar -stage pretrain -dataset $dataset -n_shot 5 
 ```
 
 The training script also includes a testing for each epoch.
